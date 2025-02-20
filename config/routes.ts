@@ -42,6 +42,12 @@
 		component: './TodoList',
 		icon: 'CheckSquareOutlined',
 	},
+	{
+		path: '/guess',
+		name: 'Guess Number',
+		component: './Guess/guess',
+		icon: 'BulbOutlined',
+	},
 	
 
 	// DANH MUC HE THONG
