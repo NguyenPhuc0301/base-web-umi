@@ -1,4 +1,6 @@
-﻿export default [
+﻿import component from "@/locales/en-US/component";
+
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -48,6 +50,97 @@
 		component: './Guess/guess',
 		icon: 'BulbOutlined',
 	},
+	{
+		path: '/game',
+		name: 'Oan Tu Ti',
+		component: './KeoBuaBao/KeoBuaBao',
+		icon: 'PlayCircleOutlined',
+	},
+
+	{
+  path: '/spa',
+  name: 'Spa',
+  icon: 'StarOutlined',
+  routes: [
+    // 1. Quản lý nhân viên & dịch vụ
+    {
+      path: '/spa/management',
+      name: 'Quản lý nhân viên, dịch vụ',
+      icon: 'SettingOutlined',
+      routes: [
+        {
+          path: '/spa/management/staff',
+          name: 'Quản lý nhân viên',
+          component: './Spa/Management/Staff',
+          icon: 'TeamOutlined',
+        },
+        {
+          path: '/spa/management/services',
+          name: 'Quản lý dịch vụ',
+          component: './Spa/Management/Services',
+          icon: 'ShoppingOutlined',
+        },
+      ],
+    },
+
+    // 2. Quản lý lịch hẹn
+    {
+      path: '/spa/appointments',
+      name: 'Quản lý lịch hẹn',
+      icon: 'CalendarOutlined',
+      routes: [
+        {
+          path: '/spa/appointments/schedule',
+          name: 'Đặt lịch hẹn',
+          component: './Spa/Appointments/Schedule',
+          icon: 'ScheduleOutlined',
+        },
+      ],
+    },
+
+    // 3. Đánh giá dịch vụ & nhân viên
+    {
+      path: '/spa/reviews',
+      name: 'Đánh giá',
+      icon: 'CommentOutlined',
+      routes: [
+        {
+          path: '/spa/reviews/list',
+          name: 'Danh sách đánh giá',
+          component: './Spa/Reviews/List',
+          icon: 'OrderedListOutlined',
+        },
+        {
+          path: '/spa/reviews/top-employees',
+          name: 'Nhân viên được đánh giá cao',
+          component: './Spa/Reviews/TopEmployees',
+          icon: 'UserOutlined',
+        },
+        {
+          path: '/spa/reviews/responses',
+          name: 'Phản hồi đánh giá',
+          component: './Spa/Reviews/Responses',
+          icon: 'MessageOutlined',
+        },
+      ],
+    },
+
+    // 4. Thống kê & báo cáo
+    {
+      path: '/spa/statistics',
+      name: 'Thống kê & báo cáo',
+      icon: 'BarChartOutlined',
+      routes: [
+        {
+          path: '/spa/statistics/reports',
+          name: 'Thống kê báo cáo',
+          component: './Spa/Statistics/Reports',
+          icon: 'FileTextOutlined',
+        },
+      ],
+    },
+  ],
+},
 	
 
 	// DANH MUC HE THONG
